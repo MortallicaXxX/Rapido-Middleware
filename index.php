@@ -13,6 +13,4 @@ class MyMiddleware extends Middleware{
   }
 
 }
-
-var_dump(new MyMiddleware("test"));
 ?>
