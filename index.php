@@ -13,5 +13,4 @@ class MyMiddleware extends Middleware{
   }
 
 }
-
 ?>
