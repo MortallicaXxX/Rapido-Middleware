@@ -4,7 +4,7 @@ include_once("middleware.php");
 class MyMiddleware extends Middleware{
 
   function __construct($args){
-
+    $this -> test = $args;
   }
 
   public function Program($routeur){
@@ -13,4 +13,6 @@ class MyMiddleware extends Middleware{
   }
 
 }
+
+var_dump(new MyMiddleware("test"));
 ?>

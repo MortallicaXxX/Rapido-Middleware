@@ -22,19 +22,4 @@ class Middleware{
   public function Program($routeur){return $routeur;}
 }
 
-/**
-  *Name : Router
-  *Type : Class
-  *Description :
-  *Use-case :
-  *Sample :
-*/
-class Error{
-
-  function __construct($msg){
-    var_dump($msg);
-  }
-
-}
-
 ?>
