@@ -1,15 +1,30 @@
 <?php
 include_once("middleware.php");
 
-class MyMiddleware extends Middleware{
-
-  function __construct($args){
-
-  }
+/**
+  *Name : Router
+  *Type : Class
+  *Description :
+  *Use-case :
+  *Sample :
+*/
+class BodyParser extends Middleware{
 
   public function Program($routeur){
-    // TOTO :
-    return $router;
+    if($routeur["REQUEST_METHOD"] == "POST"){
+      $body = $this -> __body();
+      $routeur["body"] = $body;
+    }
+    return $routeur;
+  }
+
+  /**
+    *Description :
+  */
+  private function __body(){
+    $data = json_decode(file_get_contents('php://input'), true);
+    if(is_null($data))$data = array();
+    return (array_key_exists("body",$data) ? $data["body"] : $data);
   }
 
 }
