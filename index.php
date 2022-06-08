@@ -1,6 +1,6 @@
 <?php
 include_once("middleware.php");
-include_once("Datastorage/index.js")
+include_once("Datastorage/index.php");
 
 /**
   *Name : Router
