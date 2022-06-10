@@ -11,7 +11,7 @@ include_once("middleware.php");
 class BodyParser extends Middleware{
 
   public function Program($routeur){
-    if($routeur["REQUEST_METHOD"] == "POST"){
+    if($routeur["REQUEST_METHOD"] == "POST" || $routeur["REQUEST_METHOD"] == "PUT" || $routeur["REQUEST_METHOD"] == "PATCH" || $routeur["REQUEST_METHOD"] == "DELETE"){
       $body = $this -> __body();
       $routeur["body"] = $body;
     }
